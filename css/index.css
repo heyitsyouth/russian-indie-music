@@ -1,0 +1,415 @@
+/* абсолютно все */
+*{ 
+    box-sizing: border-box;
+}
+
+/* все отображаемое */
+body{
+    min-width: 1550px;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* весь header */
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 3%;
+    border-bottom: 3px solid black;
+}
+
+/* текст навигации */
+.page_navigation ul, .main_nav ul{
+    display: flex; /* ставим элементы в строку */
+    justify-content: space-between;
+    list-style: none; /* убираем точки у списка */
+    gap: 100px; /* расстояние между пунктами */
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.page_navigation a:hover, .main_nav a:hover{
+    color: white;
+    background-color: black;
+}
+
+/* текст навигации */
+.page_navigation a, .main_nav a{
+    color: black;        /* цвет текста */
+    font-style: italic;  /* курсив */
+    text-decoration: none; /* убираем подчёркивание */
+    transition: background-color 0.25s ease, color 0.25s ease;
+    padding: 5px 7px 5px 5px;
+    border-radius: 5px;
+}
+
+/* логотип */
+.logo{
+    display: block;
+    height: 100px;
+}
+
+.logo a{
+    height: 100px;
+}
+
+/* кнопка у поля ввода */
+#search_icon {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer; /* чтобы осталась рука при наведении */
+}
+
+/* поле ввода как форма (для центра кнопки и поля) */
+.search form{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* поле ввода */
+.search{
+    display: flex;
+    width: 302px;
+    height: 30px;
+    justify-content: inline-block;
+}
+
+/* текст в поле ввода */
+#search_text{
+    font-style: italic;
+    font-size: 16px;
+    color: black;
+    width: 250px;
+    height: 30px;
+    border-radius: 16px;
+    border-color: black;
+}
+
+/* текст найти альтушку */
+#search_text::placeholder {
+    color: black;       /* цвет текста */
+    font-style: italic; /* курсив */
+    font-size: 16px;    /* размер шрифта */
+    opacity: 0.5;         /* убираем "полупрозрачность" по умолчанию */
+}
+
+/* второй хедер */
+.second_header{
+    display: flex;
+    justify-content: center;
+    margin-left: 13%;
+    margin-right: 13%;
+    border-bottom: 3px solid black;
+}
+
+/* класс заголовков */
+.main_head{
+    display: flex; /* ставим элементы в строку */
+    justify-content: center;
+    font-size: 50px;
+    margin: 2% auto;
+}
+
+/* контейнер для секции */
+.section_container{
+    display: flex;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 2%;
+    gap: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section_container_head{
+    display: flex;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 2%;
+    gap: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_container_head img{
+    width: 35%;
+    height: 35%;
+    margin-bottom: 2%;
+}
+
+/* описания для видео */
+.description{
+    font-size: 30px;
+    color: black;
+    width: 45%;
+    height: 100%; 
+}
+
+/* само видео */
+#video{
+    border: 8px solid black;
+    border-radius: 25px;
+    width: 45%;
+}
+
+.section_head{
+    display: flex; /* ставим элементы в строку */
+    justify-content: center;
+    font-size: 36px;
+    margin: 2% auto;
+}
+
+footer{
+    margin-top: 2%;
+    background-color: black;
+    height: 200px;
+}
+
+.footer_noscroll{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    height: 200px;
+    width: 100%;
+}
+
+.innerFooter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 13%;
+    margin-right: 13%;
+    height: 100%;
+}
+
+.textFooter{
+    margin-top: 0;
+    font-size: 25px;
+    color: white;
+}
+
+#aFooter{
+    font-size: 25px;
+    color: white;
+}
+
+#up{
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    margin: 2% 0 2% 0;
+    padding: 2% 13% 2% 13%;
+}
+
+.forms label{
+    display: inline-block;
+    margin-top: 2%;
+}
+
+.formsInner{
+    width: 50%;
+    height: 100%;
+}
+
+.formsInner input{
+    display: inline-block;
+}
+
+.form_button{
+    margin-top: 2%;
+    background-color: white;
+}
+
+#lists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    margin: 2% 0 2% 0;
+    padding: 2% 13% 2% 13%;
+}
+
+/* элементы страницы задачи */
+
+#calculator{
+    display: flex;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 2%;
+    gap: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#calculator_container{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* элементы страницы паспорта */
+
+#pass_main{
+    background-image: url('fon.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 734px; /* минимальная высота */
+}
+
+#pass_main {
+    background-image: url('fon.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; /* важно - сохраняет пропорции */
+    background-position: center center;
+    
+    /* Точные размеры паспорта */
+    width: 528px;
+    height: 734px;
+    position: relative; /* для абсолютного позиционирования детей */
+    margin: 0 auto; /* центрирование по горизонтали */
+    
+    /* Временные стили для отладки */
+    border: 1px solid #ccc;
+}
+
+/* Общие стили для текста в паспорте */
+#pass_main p {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #000;
+}
+
+/* ВЕРХНЯЯ ЧАСТЬ (page_top) */
+
+#page_top{
+    width: 100%;
+    height: 50%;
+}
+
+#pass_given1 {
+    top: 80px;
+    left: 150px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#pass_date {
+    top: 160px;
+    left: 120px;
+}
+
+#pass_code {
+    top: 160px;
+    right: 100px;
+    text-align: right;
+}
+
+/* НИЖНЯЯ ЧАСТЬ (page_bottom) */
+
+#page_bottom{
+    width: 100%;
+    height: 50%;
+}
+
+#passfoto {
+    position: absolute;
+    width: 145px;  /* Настройте размер под ваше фото */
+    height: 185px;
+    object-fit: cover; /* чтобы фото не искажалось */
+    bottom: 110px;
+    left: 25px;
+}
+
+#hfamilia {
+    top: 410px;
+    left: 300px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#hname {
+    top: 465px;
+    left: 310px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#hfname {
+    top: 490px;
+    left: 305px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#hpol {
+    top: 520px;
+    left: 205px;
+}
+
+#hborn {
+    top: 520px;
+    left: 330px;
+}
+
+#hpborn1 {
+    top: 545px;
+    left: 295px;
+}
+
+#hpborn2 {
+    top: 575px;
+    left: 275px;
+}
+
+/* скриншот из DOM */
+
+.screenshot{
+    display: flex;
+    margin-left: 13%;
+    margin-right: 13%;
+}
+
+.screenshot img{
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 2%;
+    border: 2px solid #000;
+}
+
+.nadpis{
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+#table_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

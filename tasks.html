@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.svg">
+    <title>прочее | русская инди музыка</title>
+    <script src="js/task.js" defer></script>
+</head>
+
+<body>
+    <!-- первый хедер -->
+    <header>
+        <div class="header-container">
+
+            <!-- логотип -->
+            <div id="logo" class="logo">
+                <a href="index.html"><img src="images/logo.svg"></a>
+            </div>
+
+            <!-- навигационные кнопки -->
+            <nav class="main_nav">
+                <ul>
+                    <li>
+                        <a href="index.html">главная</a>
+                    </li>
+                    <li>
+                        <a href="form.html">формы</a>
+                    </li>
+                    <li>
+                        <a href="passport.html">паспорт</a>
+                    </li>
+                    <li>
+                        <a href="tasks.html">
+                            <u>прочее</u>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- поисковая кнопка -->
+            <div class="search">
+                <form action="https://yandex.ru" target="_blank">
+                    <input id="search_text" type="text" placeholder="найти альтушку...">
+                    <button id="search_icon" type="submit"><img src="images/search_lupa.svg" rel="search_lupa"></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- содержимое -->
+    <main>
+        <h1 class="main_head">алгоритмическая задача</h1>
+            <div id = "calculator">
+                <h2>Дано вещественное число A. Вычислить х = a**2+4+5  при а < 62; в противном случае x = 1/(a**2) + 4a + 5). </h2>
+                <div id="calculator_container">
+                    <form action="https://yandex.ru" id="UserEnter" name="UserEnter" target="_blank">
+                        <input type = "number" id = "input_calc" placeholder="введите число A">
+                        <button type="button" onclick="calculate()">Вычислить</button>
+                        <button type="button" onclick="clearResult()">Очистить</button>
+                        <button type="submit">Отправить данные</button>
+                        <div id = "result"></div>
+                    </form>
+                </div>
+            </div>
+    
+    <!-- раздел с таблицей -->
+    <h1 class="main_head">как может выглядеть рецензия на трек</h1>
+
+    <table id="table" align="center" cellspacing="0" cellpadding="10" width="700px"
+        background="images/table_bg.jpg"
+        style="border: 3px solid #000000; border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td class="table_head" colspan="3" bgcolor="#ffffff" height="50px"
+                    style="border: 2px solid #000000;">ПРИМЕР ОБЗОРА НОВОГО АЛЬБОМА</td>
+            </tr>
+            <tr>
+                <td class="nadpis" height="200px" style="border: 2px solid #000000;">НАЗВАНИЕ ТРЕКА</td>
+                <td width="300px" style="border: 2px solid #000000;">
+                    <a id="table_img" href="https://sun9-47.userapi.com/s/v1/ig2/7rjpKNFS_bdzzDRiXTLVkHJnx4ao4IjqRjkc67pQ_urPJU5NAybzHH7Od61iknIF3aT47i9Q3FLoXZwfOJbAVuz4.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1279,1440x1439,2560x2559&from=bu&cs=2560x0"
+                        target="_blank">
+                        <img src="https://sun9-47.userapi.com/s/v1/ig2/7rjpKNFS_bdzzDRiXTLVkHJnx4ao4IjqRjkc67pQ_urPJU5NAybzHH7Od61iknIF3aT47i9Q3FLoXZwfOJbAVuz4.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1279,1440x1439,2560x2559&from=bu&cs=2560x0"
+                        width="100">
+                    </a>
+                </td>
+                <td class="nadpis" style="border: 2px solid #000000;">ОПИСАНИЕ РЕЛИЗА</td>
+            </tr>
+            <tr>
+                <td class="nadpis" colspan="3" height="100px" style="border: 2px solid #000000;">КОЛИЧЕСТВО БАЛЛОВ ОТ ЭКСПЕРТА</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    </main>
+
+    <footer>
+        <div class="innerFooter">
+            <p class="textFooter">создатель сайта: иван никулин</p>
+            <a id="aFooter" href="https://t.me/heyitsyouthh">тг для связи</a>
+        </div>
+    </footer>
+
+</body>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<link>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/index.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link rel="icon" href="images/icon.svg">
+<title>формы | русская инди музыка</title>
+</head>
+
+<body>
+    <!-- первый хедер -->
+    <header>
+        <header class="header-container">
+
+            <!-- логотип -->
+            <div id="logo" class="logo">
+                <a href="index.html"><img src="images/logo.svg"></a>
+            </div>
+
+            <!-- навигационные кнопки -->
+            <nav class="main_nav">
+                <ul>
+                    <li>
+                        <a href="index.html">главная</a>
+                    </li>
+                    <li>
+                        <a href="form.html"><u>формы</u></a>
+                    </li>
+                    <li>
+                        <a href="passport.html">паспорт</a>
+                    </li>
+                    <li>
+                        <a href="tasks.html">прочее</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- поисковая кнопка -->
+            <div class="search">
+                <form action="https://yandex.ru" target="_blank">
+                    <input id="search_text" type="text" placeholder="найти альтушку...">
+                    <button id="search_icon" type="submit"><img src="images/search_lupa.svg" rel="search_lupa"></button>
+                </form>
+            </div>
+        </header>
+    </header>
+
+    <main>
+        <h1 class="main_head">формы личных и ориг. данных</h1>
+        <!-- группировка двух форм -->
+        <div class="forms">
+            <!-- форма личных данных -->
+            <form class = "formsInner" id="form1" action="https://google.ru">
+                <fieldset>
+                    <legend>Личные данные</legend>
+                    <div>
+                        <label for="secondName">Фамилия</label>
+                        <input type="text" id="secondName" name="info" value="Иванов">
+                    </div>
+                    <div>
+                        <label for="firstName">Имя</label>
+                        <input type="text" id="firstName" name="info" value="Иван">
+                    </div>
+                    <div>
+                        <label for="groupNum">Группа</label>
+                        <input type="text" id="groupNum" name="info" value="БМД248">
+                    </div>
+                    <div>
+                        <label for="email">Почта</label>
+                        <input type="email" id="user_email" name="info" value="email@email.com">
+                    </div>
+                    <div>
+                        <label for="phoneNum">Номер телефона</label>
+                        <input type="text" id="phoneNum" name="info" value="88005553535">
+                    </div>
+                    <div>
+                        <label for="sendDate">Дата отправки</label>
+                        <input type="date" id="sendDate" name="info" value="88005553535">
+                    </div>
+                    <button type="submit" class="form_button">Отправить данные</button>
+                </fieldset>
+                </form>
+
+                <!-- форма ориг данных -->
+                <form class = "formsInner" id="form2" action="https://google.ru">
+                    <fieldset>
+                        <legend>Оригинальные данные</legend>
+                        <input type="hidden" name="hidden_info" value="emo_project_2025">
+
+                        <div>
+                            <label for="favArtist">Любимый артист: </label>
+                            <input type="text" id="favArtist" name="favArtist">
+                        </div>
+
+                        <div>
+                            <label for="favSongsNum">Сколько песен вспомнишь у него?</label>
+                            <input type="number" id="favSongsNum" name="personalData" min="0">
+                        </div>
+
+                        <div>
+                            <!-- span для строкового отображения -->
+                            <span>Любимый жанр музыки: </span>
+                            <label><input type="radio" name="genre" value="pop" checked>попса</label>
+                            <label><input type="radio" name="genre" value="rock">рок</label>
+                            <label><input type="radio" name="genre" value="emo">эмо</label>
+                            <label><input type="radio" name="genre" value="rap">рэп</label>
+                            <label><input type="radio" name="genre" value="jazz">джаз</label>
+                            <label><input type="radio" name="genre" value="indie">инди</label>
+                        </div>
+
+                        <div>
+                            <span>Любимые инструменты: </span>
+                            <label><input type="checkbox" name="instrument" value="guitar" checked>гитара</label>
+                            <label><input type="checkbox" name="instrument" value="drums">барабаны</label>
+                            <label><input type="checkbox" name="instrument" value="bass">бас</label>
+                            <label><input type="checkbox" name="instrument" value="synth">синтезатор</label>
+                            <label><input type="checkbox" name="instrument" value="sax">саксофон</label>
+                        </div>
+
+                        <div>
+                            <label for="concert">Дата ближайшего концерта артиста: </label>
+                            <input type="date" id="concert" name="concert" value="2025-10-02">
+                        </div>
+
+                        <div>
+                            <label for="prize_pass">Пароль для приза: </label>
+                            <input type="password" id="prize_pass" name="prize_pass">
+                        </div>
+
+                        <button type="submit" class="form_button">Отправить</button>
+                        <button type="reset" class="form_button">По умолчанию</button>
+                    </fieldset>
+                </form>
+        </div>
+
+        <!-- списки -->
+        <div id ="lists">
+            <!-- неупорядоченный -->
+            <ul>
+                <li>
+                    <p>свага 1</p>
+                </li>
+                <li>
+                    <p>свага 2</p>
+                </li>
+                <li>
+                    <p>свага 3</p>
+                </li>
+            </ul>
+            <!-- упорядоченный -->
+            <ol>
+                <li>
+                    <p>свага 1</p>
+                </li>
+                <li>
+                    <p>свага 2</p>
+                </li>
+                <li>
+                    <p>свага 3</p>
+                </li>
+            </ol>
+            <!-- вложенный -->
+            <ol>
+                <ol>
+                    <p>свага 1</p>
+                </li>
+                <li>
+                    <p>свага 2</p>
+                </li>
+                <li>
+                    <p>свага 3</p>
+                </ol>
+                <ol>
+                    <p>свага 1</p>
+                </li>
+                <li>
+                    <p>свага 2</p>
+                </li>
+                <li>
+                    <p>свага 3</p>
+                </ol>
+            </ol>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="innerFooter">
+            <p class="textFooter">создатель сайта: иван никулин</p>
+            <a id="aFooter" href="https://t.me/heyitsyouthh">тг для связи</a>
+        </div>
+    </footer>

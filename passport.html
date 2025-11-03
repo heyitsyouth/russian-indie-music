@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.svg">
+    <script src="js/script.js" defer></script>
+    <title>паспорт | русская инди музыка</title>
+</head>
+
+<body>
+    <!-- первый хедер -->
+    <header>
+        <div class="header-container">
+
+            <!-- логотип -->
+            <div id="logo" class="logo">
+                <a href="index.html"><img src="images/logo.svg"></a>
+            </div>
+
+            <!-- навигационные кнопки -->
+            <nav class="main_nav">
+                <ul>
+                    <li>
+                        <a href="index.html">главная</a>
+                    </li>
+                    <li>
+                        <a href="form.html">формы</a>
+                    </li>
+                    <li>
+                        <a href="passport.html">
+                            <u>паспорт</u>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tasks.html">прочее</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- поисковая кнопка -->
+            <div class="search">
+                <form action="https://yandex.ru" target="_blank">
+                    <input id="search_text" type="text" placeholder="найти альтушку...">
+                    <button id="search_icon" type="submit"><img src="images/search_lupa.svg" rel="search_lupa"></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- содержимое -->
+    <main>
+        <h1 class="main_head">Изменяем кириллицу на латиницу по клику</h1>
+        <div id="pass_main"> 
+            <button onclick="setLanguage()">изменить язык</button>
+            <div id="page_top">
+                <p id="pass_given1">МВД ПО КРУТОЙ РЕСПУБЛИКЕ</p>
+                <p id="pass_date">55.44.2077</p>
+                <p id="pass_code">HYPE-SWG</p>
+            </div>
+
+            <div id="page_bottom">
+                <img id="passfoto" src="images/yorke.png">
+                <p id="hfamilia">Никулин</p>
+                <p id="hname">Иван</p>
+                <p id="hfname">Ильич</p>
+                <p id="hpol">МУЖ.</p>
+                <p id="hborn">20.11.2005</p>
+                <p id="hpborn1">Гор. Свага</p>
+                <p id="hpborn2">Хайповая область</p>
+            </div>
+        </div>
+        <h1 class="main_head">DOM_JS. Считываем информацию из DOM</h1>
+        <!-- скриншот из DOM -->
+        <div class="screenshot">
+            <img src="images/DOM.png" alt="Считываем информацию из DOM">
+        </div>
+    </main>
+
+    <footer>
+        <div class="innerFooter">
+            <p class="textFooter">создатель сайта: иван никулин</p>
+            <a id="aFooter" href="https://t.me/heyitsyouthh">тг для связи</a>
+        </div>
+    </footer>
+
+</body>
