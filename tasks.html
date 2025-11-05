@@ -54,18 +54,66 @@
     <!-- содержимое -->
     <main>
         <h1 class="main_head">алгоритмическая задача</h1>
-            <div id = "calculator">
-                <h2>Дано вещественное число A. Вычислить х = a**2+4+5  при а < 62; в противном случае x = 1/(a**2) + 4a + 5). </h2>
-                <div id="calculator_container">
-                    <form action="https://yandex.ru" id="UserEnter" name="UserEnter" target="_blank">
-                        <input type = "number" id = "input_calc" placeholder="введите число A">
-                        <button type="button" onclick="calculate()">Вычислить</button>
-                        <button type="button" onclick="clearResult()">Очистить</button>
-                        <button type="submit">Отправить данные</button>
-                        <div id = "result"></div>
-                    </form>
-                </div>
+        <div id="calculator">
+            <h2>Дано вещественное число A. Вычислить х = a**2+4+5 при а < 62; в противном случае x = 1/(a**2) + 4a + 5).</h2>
+            <div id="calculator_container">
+                <form id="UserEnter" name="UserEnter">
+                    <input type="number" id="input_calc" placeholder="введите число A">
+                    <button type="button" onclick="calculate()">Вычислить</button>
+                    <button type="button" onclick="clearResult()">Очистить</button>
+                    <button type="button" onclick="submitToSearch()">Отправить в поиск</button>
+                    <div id="result"></div>
+                </form>
             </div>
+        </div>
+    </main>
+
+    <script>
+        function compute(a) {
+            if (a < 62) {
+                return Math.pow(a, 2) + 4 + 5;
+            } else {
+                return (1 / Math.pow(a, 2)) + (4 * a) + 5;
+            }
+        }
+
+        function calculate() {
+            let a = parseFloat(document.getElementById("input_calc").value);
+            
+            if (isNaN(a)) {
+                alert("пожалуйста, введите число!");
+                return;
+            }
+            
+            let x = compute(a);
+            
+            document.getElementById("result").innerHTML = 
+                "При a = " + a + "<br>Результат: x = " + x;
+        }
+
+        function clearResult() {
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("input_calc").value = "";
+        }
+
+        function submitToSearch() {
+            let a = parseFloat(document.getElementById("input_calc").value);
+            
+            if (isNaN(a)) {
+                alert("пожалуйста, введите число!");
+                return;
+            }
+            
+            let x = compute(a);
+            let searchText = "Алгоритмическая задача: при a=" + a + " результат x=" + x;
+            
+            // Кодируем текст для передачи в URL
+            let encodedSearch = encodeURIComponent(searchText);
+            
+            // Открываем Яндекс с результатом в поисковой строке
+            window.open("https://yandex.ru/search/?text=" + encodedSearch, "_blank");
+        }
+    </script>
     
     <!-- раздел с таблицей -->
     <h1 class="main_head">как может выглядеть рецензия на трек</h1>
@@ -103,5 +151,6 @@
             <a id="aFooter" href="https://t.me/heyitsyouthh">тг для связи</a>
         </div>
     </footer>
+
 
 </body>
